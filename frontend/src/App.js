@@ -22,7 +22,7 @@ function App() {
     formData.append("client", clientName);
 
     try {
-      const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/upload`, {
         method: "POST",
         body: formData,
       });
